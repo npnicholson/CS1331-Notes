@@ -1,0 +1,76 @@
+Multi-D Arrays
+
+Two - Dimensional arrays
+    Can be thought of as a grid
+
+    int[][] grid = new int[3][10]
+        0   1   2   ... 9
+        10  11  12  ... 19
+        20  21  22  ... 29
+
+    for(int r = 0; r < grid.length; ++)
+        for(int c = 0; c < grif[r].length; c++)
+            grid[r][c] = 10*r+c;
+
+    grid.length = 3
+    grid[0].length = 10
+
+    Could also do this:
+        int [][] grid = {{1,2,3,4,5,6,7,8,9},
+                         {10,11,12,13,14,15,16,17,18,19},
+                         {20,21,22,23,24,25,26,27,28,29}};
+
+    Multi-D arrays can have ragged sizes:
+        int[][] a = new int[3][];
+
+        This made this array: {{},
+                               {},
+                               {}}
+
+        Then do this:
+            int[0] = new int[3];
+            int[1] = new int[4];
+            int[2] = new int[5];
+            etc...
+
+Treating a primitive type like an object
+    Use a wrapper class: Java provided (Integer, Double, Character, Boolean)
+
+    Integer someInt = new Integer(12345);
+
+    Integer methods:            double b;
+        int intValue();         b=someInt.doubleValue()
+        double doubleValue();
+
+    static int parseInt(String str);
+    int num = Integer.parseInt(word);
+
+    static String toBinaryString(int num);
+    String s = Integer.toBinaryString(111);
+
+Java will auto convert between primitive and wrapper when needed
+    Integer int3;
+    int val = 13;
+    int3 = val; -> auto creates a reference
+
+    This is called "AutoBoxing".
+
+    Java also works the other way:
+
+        Integer int4 = new Integer(-4);
+        int myVal;
+        myVal = int4;
+
+        This is called "UnBoxing"
+
+    Other then these two cases, you can never assign a primitive to an object reference or vice versa
+
+
+
+
+
+
+
+
+
+

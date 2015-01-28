@@ -1,0 +1,43 @@
+System.out.println("This is cool"); // ABV: SOP("This is cool");
+
+Java provides escape sequences, indicated by \ 
+    \"  \n  \t  \\
+
+Formatted Output
+    System.out.printf("Its %6.2f for %s on %d%n", price, name, day);
+        This is a C based method that prints the following:
+            "%6.2f" ==> float with min of 6 chars (decimal counts) and 2 spots right of decimal
+                Right justified. %-6... would be left justified
+            "%s" ==> String
+            "%d" ==> int
+            "%n" ==> newline
+
+            All together this will print something like this: "Its  34.10 for <name> on <day>"
+            (Notice two spaces in front of 34.10 because we allocated 6 spaces above for that entry)
+
+
+Scanner:
+    Scanner scan;
+    scan = new Scanner(System.in);
+      |           |       |
+      V           V       V
+    Object   Constructor  Std input stream
+
+    Whitespace and Newlines are delimiters for scanner
+    Words and numbers are tokens
+
+    Scanner methods: ==> Page 81-2 in textbook
+        String next()
+        String nextLine()
+        double nextDouble()
+        int nextInt()
+
+        void useDelimiter (String)
+
+    Examples:
+        import java.util.Scanner;
+
+        Scanner scan;
+        String reply;
+        scan = new Scanner(System.in);
+        reply = scan.nextLine();

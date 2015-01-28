@@ -1,0 +1,32 @@
+Java provides the standard class library (java.lang)
+    classes are grouped into packages, sets of related classes
+        java.io
+        java.lang
+        java.math
+        java.sql
+        java.util
+        etc
+
+Java.lang is automatically available
+
+Others must be imported (fully qualify them)
+    1) Explicit - write java.util.Random everywhere used
+    2) import java.util.Random; or import java.util.*
+
+Random is a pseudo random number generator
+    Methods:
+        float nextFloat()
+            0.0<=x<1.0
+        int nextInt()
+            all +,-,0
+        int nextInt(int n)
+            0 to n-1
+
+Enumerated types - User defined types where all possible values are listed out
+    enum TypeName { breakfast, lunch, dinner}
+    enum ClassYear {fr. so, jr, sr}
+
+    Meal firstOne = breakfast
+
+    Method name returns a String value
+        S.O.P(firstOne.name()); //prints breakfast

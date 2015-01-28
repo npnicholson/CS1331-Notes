@@ -1,0 +1,47 @@
+Conversions
+
+Short <-- Long (Narrowing) is not ok
+Long <-- Short (Widening) is ok because there is never a question about the amount of room that is required.
+
+Three types of conversions occur:
+	1. 	Assignments
+	2. 	Arithmetic promotion
+	3. 	Casting
+
+	Eg.
+		1)	int sum; double avg;
+			avg = sum; //ok
+			sum = avg; //compiler error (Long <-- Short)
+
+		2)	result = sum/avg; //sum is promoted to be a double
+
+		3) 	Sum = (int) avg; //Using parentheses to transform one type onto other. This truncates, not rounds.
+
+			int a = 5, b = 2;
+			double total;	total = (double) a/b; //Casting goes first, so the answer is 2.5
+
+							total = a/b; //truncation. 2.0
+
+
+Java holds a primitive data type OR a reference to an object
+	The object is stored elsewhere
+
+Instantiation - creating an instance (object) of a class.
+	Calls a constructor method to "set up" the object
+		(Has the exact same name as the class)
+
+Access methods of a class through the . operator
+	j = new String("cool");
+	System.out.println(j.length()) // gives int of 4
+
+	*Special Case: String literal "Walk the dog"
+		There is a concat operator + for catting strings
+			"abc" + "def" ==> "abcdef"
+		char charAt(int index) - 0,1 _ n-1 (This could produce a runtime error if the index is wrong)
+		int compareTo(String s) -- (-) if this string is before the peram, 0 if the same, and (+) if after the peram string.
+		String replace(char old, char new) -- replaces every old char with the new char. Returns a new string
+		String toLowerCase()
+
+		Strings are IMMUTABLE (It cant ever be changed). Only new strings can be created.
+
+		"Some string" is a string object

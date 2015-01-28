@@ -1,0 +1,35 @@
+While loops:
+
+While (Expression)
+{
+    // do this
+}
+
+// The body might never get run
+// Infinite loops are also possible
+
+do while loop:
+
+do {
+    //code
+} while (expression);
+
+// This will always run the code at least once
+
+For Loops:
+
+    For(Variable = number; var condition; interval){
+        // Code
+    }
+
+    for(;;){
+        // This will run forever
+    }
+
+For each loops:
+    
+    for (obj o : arr){
+        // These are the shit
+    }
+
+    This loop will cycle through each obj o in the array arr.

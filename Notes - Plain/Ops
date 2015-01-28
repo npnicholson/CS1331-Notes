@@ -1,0 +1,93 @@
+Control flpw - How execution flows through program
+
+Conditionals - options for where to go next
+
+if (total < 20)
+    sum = sum + total;
+if (choice == x1)
+    value = value * 10;
+if(numStudents <= roomSize + b.calcExtras())
+    System.out.print("Assignment is OK");
+
+--
+
+Logical operators:
+
+    Not: !
+    And: &&
+    Or: ||
+
+    Java uses short-circuit evaluation
+        Means that in an expression, as soon as the result is definite, java stops evaluating the expression:
+            if (true || someMethod()) <-- This would evaluate to true immediately and would never run someMethod()
+
+        This can be useful, however:
+            if ((d != o) && (num/d > 100)) <-- This would prevent a divide by zero exception because if d was 0 then it would halt evaluation
+
+
+if (choice != 'Q')
+    i = scan.nextInt();
+else
+    System.out.println("Ending");
+    i=1;
+
+This would be a runtime error because the if statement only applies to the next statement without curly brackets:
+
+    if (choice != 'Q')
+        i = scan.nextInt();
+    else
+    {
+        System.out.println("Ending");
+        i=1;
+    }
+
+    This is the desired code.
+
+
+variable = (expression)? <true> : <false>;
+    eg: addOn = (total > 50)? total-3 : total -5;
+
+--
+
+double d1, d2;
+if(d1 == d2)
+    //code
+
+This code may not evaluate correctly because a double might be 3.499999999999 instead of 3.5
+
+Fix this by using tolerances:
+    if (Math.abs(d1-d2) < tolerance)
+        //code
+
+String s1, s2;
+if (s1 == s2)
+    //code
+
+This will evaluate the POINTER not the value. Use the .equals method instead:
+    if (s1.equals(s2))
+        //code
+
+    or
+
+    int result = s1.compareTo(s2)
+    if (result == 0)
+        //code
+
+--
+
+Switch Statements:
+
+switch (<Variable>) // variable can be int, char, enum and String (as of J7.0)
+{ 
+    case <val>: // <vals> in the cases cannot be expressions or variables
+        //code
+        break;
+    case <val2>:
+        //code
+    default:
+        //code
+        break;
+}
+
+// Without the break statement it will continue to running without evaluating each case until it finds a new break. 
+// This means that if the expression yields <val2>, it will also run the default code above.
