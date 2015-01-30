@@ -1,7 +1,10 @@
 // This is a basic comment
 public class hello{
 	public static void main (String[] args){
-		System.out.println("Hello world");
+		byte g;
+        boolean b = true;
+        g = 17 - b;
+        System.out.println("Hello world " + g);
 	}
 }
 /*
