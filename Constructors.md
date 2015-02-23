@@ -29,3 +29,7 @@ public Person (Person p) {
 }
 ```
 The above code is an issue because it has a **Reference** to *p*'s car rather then a car itself. This is **Shallow copying**
+
+## Static Methods
+
+Static methods can be inharited but not overwritten in a child class
